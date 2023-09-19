@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+    {% block title %}
+    <title>{{ super }} - Users</title>
+    {% endblock %}
+
+{% block content %}
+    <h1>{{ title }}</h1>
+    <table>
+        <thead>
+            <th>id</th>
+            <th>Имя;</th>
+            <th>Фамилия;</th>
+            <th>e-mail</th>
+            <th>Хэш пароля</th>
+        </thead>
+        <tbody>
+            {% for User in Users %}
+        <tr>
+            <td>{{ User.id }}</td>
+            <td>{{ User.name }}</td>
+            <td>{{ User.surname }}</td>
+            <td>{{ User.email }}</td>
+            <td>{{ User.password_hash }}</td>
+        </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

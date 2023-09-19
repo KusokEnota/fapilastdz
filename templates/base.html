@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+    <title>Homework Shop</title>
+    {% endblock %}
+</head>
+<body>
+    <div>
+        <a href="/" class="link">Главная</a>
+        <a href="/users/" class="link">Пользователи</a>
+        <a href="/orders/" class="link">Заказы</a>
+        <a href="/products/" class="link">Товары</a>
+
+    </div>
+
+    {% block content %}
+    <h2>Главная страница магазина</h2>
+    {% endblock %}
+
+</body>
+</html>
