@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+    {% block title %}
+    <title>{{ super }} - Users</title>
+    {% endblock %}
+
+{% block content %}
+    <h1>{{ title }}</h1>
+    <table>
+        <thead>
+            <th>id</th>
+            <th>Кто заказал</th>
+            <th>Что заказал</th>
+            <th>Дата заказа;</th>
+            <th>Статус заказа;</th>
+        </thead>
+        <tbody>
+            {% for Order in Orders %}
+        <tr>
+            <td>{{ Order.id }}</td>
+            <td>{{ Order.user_id }}</td>
+            <td>{{ Order.product_id }}</td>
+            <td>{{ Order.order_date }}</td>
+            <td>{{ Order.status }}</td>
+        </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
